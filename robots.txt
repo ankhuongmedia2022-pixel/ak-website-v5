@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ankhuongmedia2022-pixel.github.io/ak-website-v5/sitemap.xml
