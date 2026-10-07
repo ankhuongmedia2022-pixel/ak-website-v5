@@ -1,5 +1,5 @@
 name: Deploy AK Website to GitHub Pages
-# V6.6 AI Shop catalog deploy
+# V6.7 featured products and Facebook sales copy
 on:
   push:
     branches: ["main"]

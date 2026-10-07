@@ -9,3 +9,11 @@ const cp=$('#copyBriefBtn');if(cp)cp.addEventListener('click',async()=>{const o=
 (function(){const q=new URLSearchParams(location.search),v=q.get('service'),s=document.querySelector('select[name="service"]');if(!s)return;const map={'agency-white-label':'Agency / White-label','ai-skill':'AI Skill / Workflow / Prompt Pack','ai-app':'AI App / Automation','ai-business':'AI Business / Setup','ai-media-monthly':'AI Media Monthly'};if(map[v])s.value=map[v];})();
 
 (function(){const q=new URLSearchParams(location.search),p=q.get('product'),m=document.querySelector('textarea[name="message"]');if(p&&m&&!m.value){m.value='Tôi quan tâm sản phẩm: '+p+'. Vui lòng tư vấn gói phù hợp.';}})();
+
+(function(){
+  const q=new URLSearchParams(location.search),intent=q.get('intent'),m=document.querySelector('textarea[name="message"]');
+  if(!intent||!m)return;
+  const labels={buy:'Tôi muốn mua sản phẩm này.',demo:'Tôi muốn nhận demo sản phẩm/quy trình này.',build:'Tôi muốn đặt làm App theo quy trình của tôi.',consult:'Tôi muốn được tư vấn triển khai.'};
+  const extra=labels[intent];
+  if(extra && !m.value.includes(extra)) m.value=(m.value?m.value+'\n':'')+extra;
+})();
