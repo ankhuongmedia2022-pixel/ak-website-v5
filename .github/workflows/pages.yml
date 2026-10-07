@@ -1,5 +1,5 @@
 name: Deploy AK Website to GitHub Pages
-# V6.5 AI Shop deploy
+# V6.6 AI Shop catalog deploy
 on:
   push:
     branches: ["main"]
