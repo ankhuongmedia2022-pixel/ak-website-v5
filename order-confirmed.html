@@ -10,10 +10,10 @@
 <header class="nav-wrap"><nav class="container nav"><a class="brand" href="index.html"><img src="assets/logo-ak-media.svg" alt="Logo"><span>AN KHƯƠNG MEDIA</span></a><div class="nav-links"><a href="ai-shop.html">AI Shop</a><a href="order.html">Tạo đơn mới</a></div></nav></header>
 <main><section class="section"><div class="container">
 <div class="order-confirm-card reveal">
-  <span class="eyebrow">YÊU CẦU ĐÃ ĐƯỢC TẠO TRÊN THIẾT BỊ</span>
+  <span class="eyebrow">AK AI SHOP • ORDER RECEIPT</span>
   <h1 id="orderCodeTitle">Mã đơn đang được tạo...</h1>
-  <p class="lead">Đây chưa phải xác nhận rằng An Khương Media đã nhận đơn. Hãy dùng một trong các nút bên dưới để gửi mã đơn và nội dung yêu cầu.</p>
-  <div id="orderStatus" class="order-status">Trạng thái: <strong>CHỜ GỬI XÁC NHẬN</strong></div>
+  <p class="lead" id="serverNote">Đang kiểm tra trạng thái tiếp nhận...</p>
+  <div id="orderStatus" class="order-status">Trạng thái: <strong>ĐANG KIỂM TRA</strong></div>
   <pre id="orderSummary" class="order-summary">Đang tải thông tin...</pre>
   <div class="order-confirm-actions">
     <button id="copyOrderBtn" class="btn" type="button">SAO CHÉP ĐƠN</button>
@@ -21,7 +21,7 @@
     <a class="btn btn-ghost" href="tel:+84868054679">GỌI 0868 054 679</a>
     <a class="btn btn-ghost" href="ai-shop.html">QUAY LẠI AI SHOP</a>
   </div>
-  <p class="form-note">Thông tin đơn được lưu cục bộ trên trình duyệt của thiết bị này để hiển thị lại. Website không tự gửi hoặc lưu đơn lên máy chủ.</p>
+  <p class="form-note">Website gửi yêu cầu tới endpoint tiếp nhận của AK AI Shop. Đơn chỉ được xem là đã chốt sau khi phạm vi, giá cuối và thanh toán được xác nhận.</p>
 </div>
 </div></section></main>
 <div class="toast" id="toast"></div>

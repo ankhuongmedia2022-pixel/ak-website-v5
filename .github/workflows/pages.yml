@@ -1,5 +1,5 @@
 name: Deploy AK Website to GitHub Pages
-# V6.9 static order flow
+# V7.0 real order intake endpoint
 on:
   push:
     branches: ["main"]
