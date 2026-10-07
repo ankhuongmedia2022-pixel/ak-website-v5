@@ -1,6 +1,6 @@
 (function(){
   const ORDER_KEY='ak_last_order_v1';
-  const API='https://ak-website-v5.vercel.app/api/order';
+  const API='https://ak-ai-shop-orders-api.vercel.app/api/order';
   function qs(name){return new URLSearchParams(location.search).get(name)||''}
   function normalizePackage(v){
     const map={
