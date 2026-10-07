@@ -1,5 +1,5 @@
 name: Deploy AK Website to GitHub Pages
-# V6.8 product detail landing pages
+# V6.9 static order flow
 on:
   push:
     branches: ["main"]

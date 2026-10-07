@@ -87,3 +87,20 @@
 .product-offer{display:flex;align-items:center;justify-content:space-between;gap:32px}.product-offer h2{font-size:clamp(30px,4vw,46px);margin:0 0 10px}.product-offer p{color:var(--muted)}.product-offer-actions{display:grid;gap:10px;min-width:250px}
 .product-detail-link{display:inline-block;margin:5px 0 12px;color:var(--gold);font-weight:850;font-size:13px}
 @media(max-width:900px){.product-hero-grid,.product-benefit-grid{grid-template-columns:1fr}.product-offer{align-items:flex-start;flex-direction:column}.product-offer-actions{width:100%;min-width:0}.product-offer-actions .btn{width:100%}}
+
+/* V6.9 ORDER FLOW */
+.order-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:start}
+.order-form,.order-side,.order-confirm-card{background:linear-gradient(180deg,#111923,#0b121c);border:1px solid var(--line);border-radius:26px;padding:28px}
+.order-form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.order-form-head{grid-column:1/-1}
+.order-form-head h2,.order-side h2{font-size:34px;line-height:1.06;margin:0 0 14px}
+.order-form label{display:grid;gap:7px;color:#c5cfdb;font-size:13px}
+.order-form input,.order-form select,.order-form textarea{width:100%;background:#070b11;color:#fff;border:1px solid #334155;border-radius:11px;padding:12px 13px;outline:none}
+.order-form input:focus,.order-form select:focus,.order-form textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(229,185,87,.08)}
+.order-consent{grid-template-columns:auto 1fr!important;align-items:start}.order-consent input{width:auto;margin-top:4px}
+.order-side{position:sticky;top:100px}.order-step{display:grid;grid-template-columns:42px 1fr;gap:12px;padding:15px 0;border-bottom:1px solid var(--line)}.order-step b{color:var(--gold)}.order-step span{color:var(--muted)}
+.order-confirm-card{max-width:880px;margin:30px auto}.order-confirm-card h1{font-size:clamp(36px,5vw,56px);margin:8px 0 16px}
+.order-status{padding:14px 16px;border:1px solid rgba(229,185,87,.45);border-radius:14px;background:#0b1119;margin:20px 0}.order-status strong{color:var(--gold)}
+.order-summary{white-space:pre-wrap;background:#070b11;border:1px dashed #405067;border-radius:14px;padding:20px;color:#dbe3ec;overflow:auto}
+.order-confirm-actions{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0}.order-confirm-actions .btn{width:100%}
+@media(max-width:900px){.order-grid{grid-template-columns:1fr}.order-side{position:static}.order-form{grid-template-columns:1fr}.order-form-head,.order-form .wide{grid-column:1}.order-confirm-actions{grid-template-columns:1fr}}

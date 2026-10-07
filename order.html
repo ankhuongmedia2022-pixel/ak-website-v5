@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="vi"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Đặt hàng | AK AI Shop</title>
+<meta name="description" content="Tạo yêu cầu đặt Skill, Workflow, App hoặc gói AI của An Khương Media.">
+<link rel="canonical" href="https://ankhuongmedia2022-pixel.github.io/ak-website-v5/order.html">
+<link rel="stylesheet" href="styles.css"><link rel="icon" href="assets/logo-ak-media.svg">
+</head><body>
+<div class="topbar">AK AI SHOP • TẠO ĐƠN / YÊU CẦU</div>
+<header class="nav-wrap"><nav class="container nav">
+<a class="brand" href="index.html"><img src="assets/logo-ak-media.svg" alt="Logo An Khương Media"><span>AN KHƯƠNG MEDIA</span></a>
+<button class="menu-btn" aria-label="Mở menu">☰</button>
+<div class="nav-links"><a href="index.html">Trang chủ</a><a href="ai-shop.html">AI Shop</a><a aria-current="page" href="order.html">Đặt hàng</a><a href="contact.html">Liên hệ</a></div>
+</nav></header>
+<main>
+<section class="page-hero"><div class="container reveal">
+<span class="eyebrow">AK AI SHOP • ORDER</span>
+<h1>Tạo đơn hàng / <em>yêu cầu triển khai.</em></h1>
+<p>Chọn sản phẩm và gói phù hợp. Website sẽ tạo mã đơn và bản tóm tắt để bạn gửi xác nhận cho An Khương Media.</p>
+</div></section>
+
+<section class="section"><div class="container order-grid">
+<form id="orderForm" class="order-form reveal">
+  <div class="order-form-head"><span class="eyebrow">THÔNG TIN ĐƠN</span><h2>Chọn sản phẩm & gói</h2></div>
+  <label>Họ tên *<input name="name" required autocomplete="name"></label>
+  <label>Số điện thoại *<input name="phone" required inputmode="tel" autocomplete="tel"></label>
+  <label>Email<input name="email" type="email" autocomplete="email"></label>
+  <label>Công ty / đơn vị<input name="company"></label>
+  <label>Sản phẩm<select name="product" required>
+    <option value="">-- Chọn sản phẩm --</option>
+    <option>AK Video Director Skill</option>
+    <option>CapCut Edit Blueprint</option>
+    <option>AK AI Auto Studio</option>
+    <option>AK Event Content Factory</option>
+    <option>AK AI Sales Workflow</option>
+    <option>Custom AI App</option>
+    <option>Khác / Chưa xác định</option>
+  </select></label>
+  <label>Gói / phạm vi<select name="package" required>
+    <option value="">-- Chọn gói --</option>
+    <option>AI Setup — 299k–499k</option>
+    <option>AI Creator — 990k–1,9 triệu</option>
+    <option>AI Business — 2,9–5,9 triệu</option>
+    <option>AI Media Monthly — 3,9–9,9 triệu/tháng</option>
+    <option>Custom App — báo giá theo phạm vi</option>
+    <option>Nhận demo / tư vấn trước</option>
+  </select></label>
+  <label>Hình thức thanh toán dự kiến<select name="payment">
+    <option>Chuyển khoản sau khi xác nhận đơn</option>
+    <option>Trao đổi phạm vi trước khi thanh toán</option>
+    <option>Chỉ nhận demo / tư vấn trước</option>
+  </select></label>
+  <label class="wide">Yêu cầu / mô tả công việc<textarea name="notes" rows="6" placeholder="Ví dụ: Tôi cần workflow cho video event, team 2 editor, muốn dùng ChatGPT + CapCut..."></textarea></label>
+  <label class="order-consent wide"><input type="checkbox" required name="confirm"> <span>Tôi hiểu đây là bước <strong>tạo yêu cầu đặt hàng</strong>; đơn chỉ được An Khương Media tiếp nhận sau khi tôi gửi xác nhận qua SMS/điện thoại hoặc kênh liên hệ được cung cấp.</span></label>
+  <button class="btn wide" type="submit">TẠO MÃ ĐƠN HÀNG</button>
+  <p class="form-note wide">Website chưa xử lý thanh toán online. Không nhập số thẻ, OTP, mật khẩu hoặc thông tin ngân hàng nhạy cảm tại đây.</p>
+</form>
+
+<aside class="order-side reveal">
+  <span class="eyebrow">TRƯỚC KHI TẠO ĐƠN</span>
+  <h2>Quy trình xác nhận</h2>
+  <div class="order-step"><b>01</b><span>Chọn sản phẩm/gói và điền thông tin liên hệ.</span></div>
+  <div class="order-step"><b>02</b><span>Website tạo mã đơn + tóm tắt trên thiết bị.</span></div>
+  <div class="order-step"><b>03</b><span>Bạn gửi mã đơn qua SMS hoặc gọi 0868 054 679.</span></div>
+  <div class="order-step"><b>04</b><span>An Khương Media xác nhận phạm vi, giá cuối và hướng dẫn thanh toán.</span></div>
+  <div class="shop-note">Không có thông tin chuyển khoản giả định trên website. Thông tin thanh toán chỉ được cung cấp sau khi phạm vi đơn được xác nhận.</div>
+</aside>
+</div></section>
+</main>
+<footer class="footer"><div class="container footer-grid"><div><a class="brand" href="index.html"><img src="assets/logo-ak-media.svg" alt=""><span>AN KHƯƠNG MEDIA</span></a><p>AK AI Shop — Skill • App • Workflow • Automation.</p></div><div><strong>Hotline</strong><a href="tel:+84868054679">0868 054 679</a></div></div></footer>
+<a class="mobile-call" href="tel:+84868054679">☎ Gọi 0868 054 679</a>
+<script src="script.js"></script><script src="order.js"></script>
+</body></html>

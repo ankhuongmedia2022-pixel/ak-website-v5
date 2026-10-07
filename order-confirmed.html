@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="vi"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Xác nhận đơn | AK AI Shop</title>
+<meta name="description" content="Mã đơn và tóm tắt yêu cầu đặt hàng AK AI Shop.">
+<link rel="canonical" href="https://ankhuongmedia2022-pixel.github.io/ak-website-v5/order-confirmed.html">
+<link rel="stylesheet" href="styles.css"><link rel="icon" href="assets/logo-ak-media.svg">
+</head><body>
+<div class="topbar">AK AI SHOP • XÁC NHẬN YÊU CẦU</div>
+<header class="nav-wrap"><nav class="container nav"><a class="brand" href="index.html"><img src="assets/logo-ak-media.svg" alt="Logo"><span>AN KHƯƠNG MEDIA</span></a><div class="nav-links"><a href="ai-shop.html">AI Shop</a><a href="order.html">Tạo đơn mới</a></div></nav></header>
+<main><section class="section"><div class="container">
+<div class="order-confirm-card reveal">
+  <span class="eyebrow">YÊU CẦU ĐÃ ĐƯỢC TẠO TRÊN THIẾT BỊ</span>
+  <h1 id="orderCodeTitle">Mã đơn đang được tạo...</h1>
+  <p class="lead">Đây chưa phải xác nhận rằng An Khương Media đã nhận đơn. Hãy dùng một trong các nút bên dưới để gửi mã đơn và nội dung yêu cầu.</p>
+  <div id="orderStatus" class="order-status">Trạng thái: <strong>CHỜ GỬI XÁC NHẬN</strong></div>
+  <pre id="orderSummary" class="order-summary">Đang tải thông tin...</pre>
+  <div class="order-confirm-actions">
+    <button id="copyOrderBtn" class="btn" type="button">SAO CHÉP ĐƠN</button>
+    <a id="smsOrderBtn" class="btn btn-ghost" href="#">GỬI QUA SMS</a>
+    <a class="btn btn-ghost" href="tel:+84868054679">GỌI 0868 054 679</a>
+    <a class="btn btn-ghost" href="ai-shop.html">QUAY LẠI AI SHOP</a>
+  </div>
+  <p class="form-note">Thông tin đơn được lưu cục bộ trên trình duyệt của thiết bị này để hiển thị lại. Website không tự gửi hoặc lưu đơn lên máy chủ.</p>
+</div>
+</div></section></main>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script><script src="order.js"></script>
+</body></html>
