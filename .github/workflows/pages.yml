@@ -1,5 +1,5 @@
 name: Deploy AK Website to GitHub Pages
-# V6.7 featured products and Facebook sales copy
+# V6.8 product detail landing pages
 on:
   push:
     branches: ["main"]
