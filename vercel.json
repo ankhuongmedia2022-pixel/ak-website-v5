@@ -1,15 +1,40 @@
 {
   "cleanUrls": false,
   "rewrites": [
-    {"source": "/dich-vu", "destination": "/services.html"},
-    {"source": "/du-an", "destination": "/projects.html"},
-    {"source": "/gioi-thieu", "destination": "/about.html"},
-    {"source": "/lien-he", "destination": "/contact.html"}
+    {
+      "source": "/dich-vu",
+      "destination": "/services.html"
+    },
+    {
+      "source": "/du-an",
+      "destination": "/projects.html"
+    },
+    {
+      "source": "/gioi-thieu",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/lien-he",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/agency",
+      "destination": "/agency.html"
+    }
   ],
   "headers": [
-    {"source": "/(.*)", "headers": [
-      {"key": "X-Content-Type-Options", "value": "nosniff"},
-      {"key": "Referrer-Policy", "value": "strict-origin-when-cross-origin"}
-    ]}
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
   ]
 }

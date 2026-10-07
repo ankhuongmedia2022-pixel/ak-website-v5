@@ -1,13 +1,12 @@
-# AK WEBSITE V6.3 — An Khương Media
+# AK WEBSITE V6.4 — An Khương Media
 
 Production: https://ak-website-v5.vercel.app/
 
 Hotline: **0868 054 679**
 
-V6.3:
-- Real portfolio videos: DEVIE, INSEE, Royal Dental Lab.
-- Conversion packages: Event Content Pack, Event Reels Sprint, Event Coverage.
-- White-label agency positioning.
-- FAQ + FAQ schema.
-- Lead brief: copy / SMS / Facebook.
-- Images containing the outdated contact number are intentionally not used.
+V6.4:
+- Dedicated white-label landing page for event agencies: /agency
+- Real proof: DEVIE, INSEE, Royal Dental Lab
+- Agency CTA prefills contact form
+- Event Reels Sprint positioning
+- Existing direct-business packages, FAQ, SEO and portfolio retained
