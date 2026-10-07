@@ -1,14 +1,12 @@
-# AK WEBSITE V6.1 — An Khương Media
+# AK WEBSITE V6.2 — An Khương Media
 
-Website production: https://ak-website-v5.vercel.app/
+Production: https://ak-website-v5.vercel.app/
 
-Hotline duy nhất: **0868 054 679**
+Hotline: **0868 054 679**
 
-Các trang chính:
-- /
-- /dich-vu
-- /du-an
-- /gioi-thieu
-- /lien-he
-
-Form liên hệ tạo brief và hỗ trợ sao chép / SMS / mở Facebook.
+V6.2:
+- Portfolio video thật: DEVIE Highlight, INSEE Recap, INSEE Gala, Royal Dental Lab Recap.
+- 4 Royal Dental Lab short cuts/Reels.
+- Google Drive videos are embedded and also linked for direct viewing.
+- Clean routes: /dich-vu, /du-an, /gioi-thieu, /lien-he
+- Lead brief: copy / SMS / Facebook.
