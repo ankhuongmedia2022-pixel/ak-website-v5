@@ -20,6 +20,10 @@
     {
       "source": "/agency",
       "destination": "/agency.html"
+    },
+    {
+      "source": "/ai-shop",
+      "destination": "/ai-shop.html"
     }
   ],
   "headers": [
