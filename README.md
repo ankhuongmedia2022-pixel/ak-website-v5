@@ -10,3 +10,7 @@ V6.4:
 - Agency CTA prefills contact form
 - Event Reels Sprint positioning
 - Existing direct-business packages, FAQ, SEO and portfolio retained
+
+
+## V6.5
+Added AK AI Shop for Skill, App, Workflow and AI packages.
