@@ -16,7 +16,7 @@
 <section class="page-hero"><div class="container reveal">
 <span class="eyebrow">AK AI SHOP • ORDER</span>
 <h1>Tạo đơn hàng / <em>yêu cầu triển khai.</em></h1>
-<p>Chọn sản phẩm và gói phù hợp. Website sẽ tạo mã đơn và bản tóm tắt để bạn gửi xác nhận cho An Khương Media.</p>
+<p>Chọn sản phẩm và gói phù hợp. Website tạo mã đơn, gửi yêu cầu tới hệ thống tiếp nhận và hiển thị kết quả để bạn kiểm tra.</p>
 </div></section>
 
 <section class="section"><div class="container order-grid">
@@ -51,8 +51,10 @@
     <option>Chỉ nhận demo / tư vấn trước</option>
   </select></label>
   <label class="wide">Yêu cầu / mô tả công việc<textarea name="notes" rows="6" placeholder="Ví dụ: Tôi cần workflow cho video event, team 2 editor, muốn dùng ChatGPT + CapCut..."></textarea></label>
-  <label class="order-consent wide"><input type="checkbox" required name="confirm"> <span>Tôi hiểu đây là bước <strong>tạo yêu cầu đặt hàng</strong>; đơn chỉ được An Khương Media tiếp nhận sau khi tôi gửi xác nhận qua SMS/điện thoại hoặc kênh liên hệ được cung cấp.</span></label>
+  <label class="order-consent wide"><input type="checkbox" required name="confirm"> <span>Tôi hiểu đây là bước <strong>tạo yêu cầu đặt hàng</strong>; website sẽ hiển thị kết quả tiếp nhận. Phạm vi và giá cuối cần được An Khương Media xác nhận trước khi thanh toán.</span></label>
   <button class="btn wide" type="submit">TẠO MÃ ĐƠN HÀNG</button>
+  <pre id="orderFeedback" class="order-summary wide" role="status" aria-live="polite" hidden></pre>
+  <p class="form-note wide">Nếu gửi lại nội dung của yêu cầu gần nhất trong 24 giờ, website sẽ mở mã đơn còn lưu trên trình duyệt này. Khi mất kết nối, hãy kiểm tra với hotline bằng mã cũ trước khi tạo yêu cầu khác.</p>
   <p class="form-note wide">Website chưa xử lý thanh toán online. Không nhập số thẻ, OTP, mật khẩu hoặc thông tin ngân hàng nhạy cảm tại đây.</p>
 </form>
 
@@ -60,8 +62,8 @@
   <span class="eyebrow">TRƯỚC KHI TẠO ĐƠN</span>
   <h2>Quy trình xác nhận</h2>
   <div class="order-step"><b>01</b><span>Chọn sản phẩm/gói và điền thông tin liên hệ.</span></div>
-  <div class="order-step"><b>02</b><span>Website tạo mã đơn + tóm tắt trên thiết bị.</span></div>
-  <div class="order-step"><b>03</b><span>Bạn gửi mã đơn qua SMS hoặc gọi 0868 054 679.</span></div>
+  <div class="order-step"><b>02</b><span>Website tạo mã đơn, lưu tóm tắt trên thiết bị và gửi yêu cầu tới hệ thống.</span></div>
+  <div class="order-step"><b>03</b><span>Kiểm tra trạng thái tiếp nhận. Nếu chưa được xác nhận, gửi SMS hoặc gọi 0868 054 679.</span></div>
   <div class="order-step"><b>04</b><span>An Khương Media xác nhận phạm vi, giá cuối và hướng dẫn thanh toán.</span></div>
   <div class="shop-note">Không có thông tin chuyển khoản giả định trên website. Thông tin thanh toán chỉ được cung cấp sau khi phạm vi đơn được xác nhận.</div>
 </aside>
