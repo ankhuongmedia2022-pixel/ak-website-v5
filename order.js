@@ -1,6 +1,16 @@
 (function(){
   const ORDER_KEY='ak_last_order_v1';
   const API='https://ak-ai-shop-orders-api.vercel.app/api/order';
+  let submitting=false;
+  function loadOrder(){
+    for(const key of ['localStorage','sessionStorage']){
+      try{
+        const o=JSON.parse(window[key].getItem(ORDER_KEY)||'null');
+        if(o && typeof o==='object' && ['code','name','phone','product','package','createdAt'].every(k=>typeof o[k]==='string' && o[k].trim())) return o;
+      }catch(_){}
+    }
+    return null;
+  }
   function qs(name){return new URLSearchParams(location.search).get(name)||''}
   function normalizePackage(v){
     const map={
@@ -43,8 +53,11 @@
     ].join('\n');
   }
   function save(o){
-    try{localStorage.setItem(ORDER_KEY,JSON.stringify(o));}
-    catch(err){try{sessionStorage.setItem(ORDER_KEY,JSON.stringify(o));}catch(_){}}
+    let saved=false;
+    for(const key of ['localStorage','sessionStorage']){
+      try{window[key].setItem(ORDER_KEY,JSON.stringify(o));saved=true;}catch(_){}
+    }
+    return saved;
   }
 
   const form=document.getElementById('orderForm');
@@ -56,6 +69,7 @@
 
     form.addEventListener('submit',async e=>{
       e.preventDefault();
+      if(submitting || !form.reportValidity())return;
       const fd=new FormData(form), submit=form.querySelector('button[type="submit"]');
       const order={
         code:code(),
@@ -72,16 +86,21 @@
         serverReceived:false,
         serverReceipt:''
       };
-      save(order);
+      if(!order.name || !order.phone){alert('Vui lòng nhập họ tên và số điện thoại.');return;}
+      if(!save(order)){alert('Không thể lưu mã đơn trên thiết bị. Vui lòng gọi 0868 054 679 để gửi yêu cầu.');return;}
+      submitting=true;
       if(submit){submit.disabled=true;submit.textContent='ĐANG GỬI YÊU CẦU...';}
+      const controller=new AbortController();
+      const timer=setTimeout(()=>controller.abort(),15000);
       try{
         const res=await fetch(API,{
           method:'POST',
           headers:{'Content-Type':'application/json'},
+          signal:controller.signal,
           body:JSON.stringify(order)
         });
         const data=await res.json().catch(()=>({}));
-        if(res.ok&&data.ok){
+        if(res.ok&&data.ok===true){
           order.serverReceived=true;
           order.serverReceipt=data.receiptId||'';
           order.serverReceivedAt=data.receivedAt||'';
@@ -90,22 +109,25 @@
       }catch(err){
         order.serverReceived=false;
         save(order);
-      }
+      }finally{clearTimeout(timer);}
       location.href='order-confirmed.html';
     });
   }
 
   const box=document.getElementById('orderSummary');
   if(box){
-    let raw=null;
-    try{raw=localStorage.getItem(ORDER_KEY)||sessionStorage.getItem(ORDER_KEY);}catch(e){}
-    if(!raw){
+    const o=loadOrder();
+    if(!o){
       document.getElementById('orderCodeTitle').textContent='Chưa có dữ liệu đơn hàng';
       box.textContent='Hãy quay lại trang Đặt hàng để tạo yêu cầu mới.';
       const sms=document.getElementById('smsOrderBtn'); if(sms)sms.style.display='none';
+      const cp=document.getElementById('copyOrderBtn'); if(cp)cp.disabled=true;
+      const status=document.getElementById('orderStatus'); if(status)status.textContent='Trạng thái: CHƯA CÓ ĐƠN';
+      const note=document.getElementById('serverNote'); if(note)note.textContent='Chưa có đơn hợp lệ được lưu trên thiết bị này.';
       return;
     }
-    const o=JSON.parse(raw), text=summary(o);
+    o.serverReceived=o.serverReceived===true;
+    const text=summary(o);
     document.getElementById('orderCodeTitle').textContent='Mã đơn: '+o.code;
     box.textContent=text;
     const status=document.getElementById('orderStatus');
