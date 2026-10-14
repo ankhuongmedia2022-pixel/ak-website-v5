@@ -21,16 +21,16 @@ function read(relativePath) {
 }
 
 for (const name of skillNames) {
-  test(\`${name}: skill file has valid identifying frontmatter\`, () => {
+  test(`${name}: skill file has valid identifying frontmatter`, () => {
     const skillPath = path.join(skillsRoot, name, 'SKILL.md');
     const content = fs.readFileSync(skillPath, 'utf8');
     const frontmatter = content.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/);
-    assert.ok(frontmatter, \`${name} needs opening and closing YAML delimiters\`);
+    assert.ok(frontmatter, `${name} needs opening and closing YAML delimiters`);
     assert.ok(
-      frontmatter[1].split(/\r?\n/).some((line) => line.trim() === \`name: ${name}\`),
-      \`${name} must declare its folder name in YAML frontmatter\`,
+      frontmatter[1].split(/\r?\n/).some((line) => line.trim() === `name: ${name}`),
+      `${name} must declare its folder name in YAML frontmatter`,
     );
-    assert.ok(content.length > frontmatter[0].length, \`${name} needs a nonempty skill body\`);
+    assert.ok(content.length > frontmatter[0].length, `${name} needs a nonempty skill body`);
   });
 }
 
@@ -43,7 +43,7 @@ test('required shared checklists and hardening reference exist', () => {
     '.agents/skills/security-and-hardening/references/hardening-patterns.md',
   ];
   for (const file of required) {
-    assert.ok(read(file).trim(), \`${file} must exist and be nonempty\`);
+    assert.ok(read(file).trim(), `${file} must exist and be nonempty`);
   }
 });
 
